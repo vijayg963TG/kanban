@@ -3,7 +3,6 @@
  header {
      display: flex;
      justify-content: space-between;
-     padding-right: size(25);
      position: fixed;
      left: 0;
      top: 0;
@@ -68,11 +67,51 @@
          object-fit: contain;
          @include flexbox;
          @include align-items(center);
-         @include justify-content(flex-end);
+         @include justify-content(space-between);
          height: 88px;
+         padding: 0 3rem;
 
+         .header_menu {
+             display: flex;
+             align-items: center;
+             gap: 1.7rem;
+         }
 
+         .user_details {
+             display: flex;
+             align-items: center;
+             gap: 1.1rem;
+             width: 220px;
+             text-align: end;
+             justify-content: flex-end;
 
+             .userImg {
+                 height: 38px;
+                 width: 38px;
+
+                 img {
+                     border-radius: 50%;
+
+                 }
+             }
+
+             h4 {
+                 color: var(--bs-heading);
+             }
+
+             p {
+                 color: var(--bs-subHeading);
+                 font-size: 14px;
+
+             }
+
+             h4,
+             p {
+                 padding: 0;
+                 margin: 0;
+             }
+
+         }
      }
 
  }

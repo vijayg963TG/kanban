@@ -4,96 +4,137 @@
   background: url(../../assets/images/Sidebar/zero.svg) no-repeat bottom left;
   height: 100%;
 
-  .MuiListItem-root {
-    padding: 0;
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding: 22px 0;
+    margin: 0 22px;
+    border-bottom: 1px solid var(--bs-borderColor);
 
-    :hover {
-      background-color: #701e9c;
+
+    .active {
+      background-color: rgba($color: lightGray, $alpha: 0.8);
+      border-radius: 6PX;
+
+
+      li {
+        color: black;
+        font-weight: 600;
+      }
+
     }
 
-    .nvBx {
-      display: block;
-      height: 52px;
-      padding: 0 22px;
-      width: 100%;
-      position: relative;
+    .listItem {
+      min-width: auto;
+      padding: 0.8rem 0;
       display: flex;
       align-items: center;
-      cursor: pointer;
-      color: white;
-      gap: 16px;
+      color: var(--bs-subHeading);
+      font-weight: 500;
+      position: relative;
 
 
-      .rightArrowIcon {
-        width: 16px;
-        position: absolute;
-        right: 22px;
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
       }
 
-      .MuiListItemIcon-root {
-        min-width: auto;
-        width: 28px;
-        height: 28px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      span {
+        display: inline-block;
+        margin-right: 1rem;
+        height: 24px;
+        width: 24px;
 
         img {
-          max-width: 20px;
-          max-height: 21px;
-        }
-
-        @include for-medium-desktop {
-          width: 26px;
-          height: 26px;
-        }
-
-        @include for-medium-tablet {
-          width: 22px;
-          height: 22px;
-        }
-
-        @include for-mobile-device {
-          width: 18px;
-          height: 18px;
+          width: 100%;
         }
       }
 
-      &.active {
-        color: white;
-        background-color: #701E9C;
-
+      @include for-medium-desktop {
+        width: 26px;
+        height: 26px;
       }
 
-      .nv_icon {
-        position: absolute;
-        right: 10px;
-        top: 10px;
+      @include for-medium-tablet {
+        width: 22px;
+        height: 22px;
       }
 
+      @include for-mobile-device {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+  }
+
+  .nvBx {
+    display: block;
+    height: 52px;
+    padding: 0 22px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    gap: 16px;
+
+
+    .rightArrowIcon {
+      width: 16px;
+      position: absolute;
+      right: 22px;
+    }
+
+
+
+
+
+    .nv_icon {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+
+  }
+
+  .projects {
+    padding: 22px 0;
+
+    ul {
+
+      padding: 22px 0;
+      margin: 0 10px;
+      border: none;
+
+      .listItem {
+        padding: 12px;
+      }
+    }
+
+    .menuDot {
+      position: absolute;
+      right: 0;
+    }
+
+
+    .projectHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 22px;
+
+
+      h4 {
+        padding: 0;
+        margin: 0;
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--bs-subHeading);
+      }
     }
   }
 
-
-  .inside_nv_list {
-    padding-left: 50px;
-    padding-bottom: 10px;
-
-    .inside_nv_list {
-      padding-left: 10px;
-    }
-  }
-}
-
-.listItem {
-  display: flex;
-  gap: 10px;
-
-  span {
-    width: 45px;
-  }
-
-  li {
-    list-style: none;
-  }
 }

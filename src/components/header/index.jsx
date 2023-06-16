@@ -1,6 +1,13 @@
-import React, { useEffect } from "react";
 import "./header.scss";
-import { logoIcon, logo_sec_arrow } from "../../constant";
+import {
+  arrowDownIcon,
+  calender2Icon,
+  logoIcon,
+  logo_sec_arrow,
+  messageQAIcon,
+  notificationIcon,
+  userProfile,
+} from "../../constant";
 import { SearchInput } from "../input/SearchInput";
 
 export default function Header({ clname, open, setOpen }) {
@@ -20,13 +27,26 @@ export default function Header({ clname, open, setOpen }) {
       </div>
       <div className="rt">
         <SearchInput />
-        <div className="header_user_del">
-          <span className="notification">notify</span>
-          <button className="user_del">
-            <div className="srtName">JD</div>
-            <span>{"John"} </span>
-          </button>
-          <div>DropDown</div>
+        <div className="header_menu">
+          <span className="tab">
+            <img src={calender2Icon} alt="calender" />
+          </span>
+          <span className="tab">
+            <img src={messageQAIcon} alt="calender" />
+          </span>
+          <span className="tab">
+            <img src={notificationIcon} alt="calender" />
+          </span>
+          <div className="user_details">
+            <div>
+              <h4>Anima Agrawal</h4>
+              <p>U.P, India</p>
+            </div>
+            <span className="userImg">
+              <img src={userProfile} alt="" />
+            </span>
+            <img src={arrowDownIcon} alt="" />
+          </div>
         </div>
       </div>
     </header>

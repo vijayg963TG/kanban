@@ -5,7 +5,8 @@
 
     .menuBar {
         .MuiDrawer-paper {
-            width: size(260);
+            box-sizing: border-box;
+            width: size(250);
             top: size(88);
             height: 100%;
             overflow: hidden;
@@ -24,7 +25,7 @@
     }
 
     main {
-        min-height: calc(100vh - size(79));
+        min-height: calc(100vh - 88px);
         padding-left: size(260);
         margin-top: size(100);
         position: absolute;
