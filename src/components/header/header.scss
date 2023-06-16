@@ -1,0 +1,78 @@
+ @import "../../scss/mixin";
+
+ header {
+     display: flex;
+     justify-content: space-between;
+     padding-right: size(25);
+     position: fixed;
+     left: 0;
+     top: 0;
+     right: 0;
+     z-index: 99;
+     width: 100%;
+     min-height: size(88);
+     height: 88px;
+     border-bottom: 1px solid var(--bs-borderColor);
+
+     .lg_wrap {
+         display: flex;
+         align-items: center;
+         gap: 1rem;
+
+         span {
+             width: 24px;
+             height: 24px;
+             display: inline-block;
+
+             img {
+                 width: 100%;
+             }
+         }
+     }
+
+
+     .lt {
+         box-sizing: border-box;
+         padding: 22px;
+         width: 250px;
+         height: 88px;
+         display: flex;
+         align-items: center;
+         border-right: 1px solid var(--bs-borderColor);
+         border-bottom: 1px solid var(--bs-borderColor);
+         position: relative;
+
+
+         .ar_nv {
+             width: size(20);
+             height: size(20);
+             position: absolute;
+             right: 25px;
+             border-radius: 50%;
+             background-color: var(--bs-white);
+             top: 50%;
+             @include transform(translateY(-50%));
+             cursor: pointer;
+             @include flexbox;
+             justify-content: center;
+             align-items: center;
+
+             img {
+                 transform: rotate(180deg);
+             }
+         }
+     }
+
+     .rt {
+         flex: auto;
+         object-fit: contain;
+         @include flexbox;
+         @include align-items(center);
+         @include justify-content(flex-end);
+         height: 88px;
+
+
+
+     }
+
+ }

@@ -1,0 +1,99 @@
+@import "../../scss/mixin";
+
+.listContainer {
+  background: url(../../assets/images/Sidebar/zero.svg) no-repeat bottom left;
+  height: 100%;
+
+  .MuiListItem-root {
+    padding: 0;
+
+    :hover {
+      background-color: #701e9c;
+    }
+
+    .nvBx {
+      display: block;
+      height: 52px;
+      padding: 0 22px;
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: white;
+      gap: 16px;
+
+
+      .rightArrowIcon {
+        width: 16px;
+        position: absolute;
+        right: 22px;
+      }
+
+      .MuiListItemIcon-root {
+        min-width: auto;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          max-width: 20px;
+          max-height: 21px;
+        }
+
+        @include for-medium-desktop {
+          width: 26px;
+          height: 26px;
+        }
+
+        @include for-medium-tablet {
+          width: 22px;
+          height: 22px;
+        }
+
+        @include for-mobile-device {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      &.active {
+        color: white;
+        background-color: #701E9C;
+
+      }
+
+      .nv_icon {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+
+    }
+  }
+
+
+  .inside_nv_list {
+    padding-left: 50px;
+    padding-bottom: 10px;
+
+    .inside_nv_list {
+      padding-left: 10px;
+    }
+  }
+}
+
+.listItem {
+  display: flex;
+  gap: 10px;
+
+  span {
+    width: 45px;
+  }
+
+  li {
+    list-style: none;
+  }
+}
